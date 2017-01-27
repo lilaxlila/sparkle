@@ -1,0 +1,47 @@
+#one {
+  background: linear-gradient(  white, orange, pink, purple);
+}
+
+#two {
+  background: linear-gradient( pink, turquoise, purple, hotpink);
+}
+
+#three {
+background: linear-gradient(grey, white, black, teal);
+}
+
+#four {
+background: radial-gradient( black, teal, turquoise, lightgray, white);
+
+
+}
+
+#five {
+
+
+
+}
+
+
+
+#six{}
+
+
+
+
+
+
+
+
+
+
+
+p {
+font-family: Courier;
+font-size: 30px;
+
+}
+
+table{
+  border: dotted 7px #000;
+}
