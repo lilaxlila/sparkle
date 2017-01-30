@@ -1,37 +1,34 @@
 #one {
-  background: linear-gradient(  white, orange, pink, purple);
+  background: radial-gradient(#bee8f7 , #f7bef3, #bee8f7);
+
 }
 
 #two {
-  background: linear-gradient( pink, turquoise, purple, hotpink);
+  background: radial-gradient( #c84eed, turquoise, #35f27d, #c84eed);
 }
 
 #three {
-background: linear-gradient(grey, white, black, teal);
+background: linear-gradient(#e290ed, #36f9f6, #e290ed,#36f9f6);
 }
 
 #four {
-background: radial-gradient( black, teal, turquoise, lightgray, white);
+background: radial-gradient( #f450dc, #0a34d8, #f450dc, #0a34d8, #f450dc);
 
 
 }
 
 #five {
 
-
+background: linear-gradient( magenta, #f2b382, #f2df82, #8cf282, #82f2f2, #cb82f2, #e00bce);
 
 }
 
 
 
-#six{}
+#six{
+  background: linear-gradient( #a218e2, #75f488, #52dbea);
 
-
-
-
-
-
-
+}
 
 
 
