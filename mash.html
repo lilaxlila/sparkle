@@ -1,0 +1,215 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Patrick+Hand|Shadows+Into+Light" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>What will your fate be?</title>
+  <style>
+    h1{
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 3em;
+    }
+
+
+    p, ol, li, div, input {
+      color: #000;
+      font-family: 'Coming Soon',cursive;
+      font-size: 1.25em;
+    }
+
+    body {
+      /* background-image: url("beachh.GIF"); */
+      /*background-image: url(http://www.dj-sr.co.uk/wp-content/uploads/2014/03/DJ-SR-Background-Vinyl-Sleeve.jpg);*/
+      background-image: url(http://dadabasenyc.com/wp-content/uploads/2013/03/10_crumple-2-40x601.jpg);
+      /*background-image: url(http://yourhomewizards.com/wp-content/uploads/2014/08/whitewashed-wood-pained-wood-floor.jpg); */
+      background-size:cover;
+    }
+    td {
+      padding: 10px 10px 10px 10px;
+      margin: auto;
+      text-align: center;
+    }
+    table {
+      margin: auto;
+    }
+    #box {
+      background-color: #fff;
+      background-image: url(https://s-media-cache-ak0.pinimg.com/originals/14/bf/b7/14bfb731b9dd3bae441cfcd22e4e2f61.jpg);
+      background-size:cover;
+      text-align: center;
+      width: 75%;
+      padding: 10px;
+      margin-top: 100px;
+      margin: auto;
+      border: 4px #555 solid;
+    }
+
+    #mashie {
+      margin: 0 auto;
+    }
+
+    #result {
+      width:50%;
+      margin: 0 auto;
+      display: none;
+    }
+
+
+  </style>
+
+</head>
+
+  <body>
+    <div id="box">
+      <h1>M.A.S.H.!!!</h1>
+      
+      <table>
+        <tr>
+          <td>
+              <form>
+                <h2>Write three names</h2>
+                <input id="name1" type="text" value="enter a name"/> <br>
+                <input id="name2" type="text" value="enter a name"/><br>
+                <input id="name3" type="text" value="enter a name"/><br>
+
+
+              </form>
+          </td>
+          <td>
+              <form>
+                <h2>Write three jobs</h2>
+                <input id="job1" type="text" value="enter a job"/> <br>
+                <input id="job2" type="text" value="enter a job"/><br>
+                <input id="job3" type="text" value="enter a job"/><br>
+
+
+              </form>
+          </td>
+          <td>
+              <form>
+                <h2>Write three cars</h2>
+                <input id="car1" type="text" value="enter a car"/> <br>
+                <input id="car2" type="text" value="enter a car"/><br>
+                <input id="car3" type="text" value="enter a car"/><br>
+
+
+              </form>
+          </td>
+          <td>
+              <form>
+                <h2>Write three places</h2>
+                <input id="city1" type="text" value="enter a place"/> <br>
+                <input id="city2" type="text" value="enter a place"/><br>
+                <input id="city3" type="text" value="enter a place"/><br>
+
+
+              </form>
+          </td>
+        </tr>
+        <tr >
+
+          <td colspan="4">
+            <input type="button" id="mashie" value="Mash it up!" />
+          </td>
+
+        </tr>
+      </table>
+      <br>
+      <br>
+      <!--
+      simpler version
+      <script>document.write(students[randomNumber()] + " is the best!");</script>
+
+      <script>document.write("You will marry " +students[randomStudent()] + ", live in a " + mash[randomNumber()] + ", have " + randomNumber() + " kids, and you will work as a " + jobs[randomNumber()]);</script> -->
+        <div id="result">
+          <h2>You will marry <span id="student"></span>,
+            live in a <span id="mash"></span>
+            in <span id="place"></span>,
+            have <span id="number"></span> kids,
+            drive a <span id="car"></span>,
+            and you will work as a <span id="job"></span>.</h2>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+  </body>
+  <script>
+
+        var names= [];
+        var mash = ["mansion", "apartment", "shack", "house"];
+        var jobs= [];
+        var cities=[];
+        var cars=[];
+
+
+
+        function randomStudent(){
+          var rando = Math.random()*students.length;
+          return Math.floor(rando);
+        }
+
+        function randomNumber(){
+          var randNumber = Math.random()*3;
+          return Math.floor(randNumber);
+        }
+
+        function randomKids(){
+          var kiddos = Math.random()*6;
+          return Math.floor(kiddos);
+        }
+
+        function mashIt(){
+
+
+          //push all values of all inputs to each respective array
+          names.push(document.getElementById("name1").value);
+          names.push(document.getElementById("name2").value);
+          names.push(document.getElementById("name3").value);
+
+          jobs.push(document.getElementById("job1").value);
+          jobs.push(document.getElementById("job2").value);
+          jobs.push(document.getElementById("job3").value);
+
+          cars.push(document.getElementById("car1").value);
+          cars.push(document.getElementById("car2").value);
+          cars.push(document.getElementById("car3").value);
+
+          cities.push(document.getElementById("city1").value);
+          cities.push(document.getElementById("city2").value);
+          cities.push(document.getElementById("city3").value);
+
+          //put random selection into span text
+          $('#job').text(jobs[randomNumber()]);
+          $('#mash').text(mash[randomNumber()]);
+          $('#car').text(cars[randomNumber()]);
+          $('#place').text(cities[randomNumber()]);
+          $('#student').text(names[randomNumber()]);
+          $('#number').text(randomKids());
+
+
+
+
+
+        }
+
+
+        //toggle visibility of result div
+        $('#mashie').on('click', function() {
+            $('#result').css('display', 'block');
+        });
+
+        $('#mashie').on('click', mashIt);
+
+        window.onload = function(){
+          document.getElementsByTag("input").value = "";
+        }
+
+
+  </script>
+</html>
